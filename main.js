@@ -42,22 +42,32 @@ const ourTeam = [
 
 ]
 
+//Prova per inserire le card una alla volta
+/*setInterval(() => {
 
-let cardMember;
-const imageLink = "img/michael-scott.jpg";
+  createMemberCard();
+  
+}, 3000);*/
 
 
 
+createMemberCard();
 
-for (let i=0; i < ourTeam.length; i++){
-
-  createEmptyCard();
-  let photoOfTheMember = ourTeam[i].photo;
-  createImage(photoOfTheMember);
-  let infoNameOfTheMember = ourTeam[i].name;
-  let infoRoleOfTheMember = ourTeam[i].role;
-  memberInfo(infoNameOfTheMember,infoRoleOfTheMember);
+//funzione con ciclo per inserire le card
+function createMemberCard (){
+  for (let i=0; i < ourTeam.length; i++){
+  
+    createEmptyCard();
+    let photoOfTheMember = ourTeam[i].photo;
+    createImage(photoOfTheMember);
+    let infoNameOfTheMember = ourTeam[i].name;
+    let infoRoleOfTheMember = ourTeam[i].role;
+    memberInfo(infoNameOfTheMember,infoRoleOfTheMember);
+  }
 }
+
+
+
 
 
 //funzione per creare la card
