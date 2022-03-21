@@ -47,6 +47,7 @@ let cardMember;
 const imageLink = "img/wayne-barnett-founder-ceo.jpg";
 createEmptyCard();
 createImage(imageLink);
+memberInfo(0,0)
 
 //funzione per creare la card
 function createEmptyCard() {
@@ -69,3 +70,19 @@ function createImage (link){
   cardImageDiv.appendChild(cardImage);
 
 };
+
+
+//funzione per inserire il testo
+function memberInfo(nameOfTheMember, roleOfTheMember){
+
+  const cardText = document.createElement('div');
+  cardText.setAttribute('class', 'card-text');
+  cardMember.appendChild(cardText);
+  let memberName = document.createElement('h3');
+  memberName.innerHTML = ourTeam[nameOfTheMember].name;
+  cardText.appendChild(memberName);
+  let memberRole = document.createElement('p');
+  memberRole.innerHTML = ourTeam[roleOfTheMember].role;
+  cardText.appendChild(memberRole);
+
+}
