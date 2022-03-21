@@ -57,12 +57,6 @@ section {
   margin-right: 28px;
 }
 
-.team-container::after {
-  flex: auto;
-
-  content: "";
-}
-
 .card-image {
   overflow: hidden;
 
@@ -74,7 +68,7 @@ section {
 
   transition: all 1s;
   height: 25rem;
-  width: 24rem;
+  width: 22rem;
   object-fit: cover;
 }
 

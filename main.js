@@ -90,10 +90,10 @@ function memberInfo(nameOfTheMember, roleOfTheMember){
   cardText.setAttribute('class', 'card-text');
   cardMember.appendChild(cardText);
   let memberName = document.createElement('h3');
-  memberName.innerHTML = ourTeam[nameOfTheMember];
+  memberName.innerHTML = nameOfTheMember;
   cardText.appendChild(memberName);
   let memberRole = document.createElement('p');
-  memberRole.innerHTML = ourTeam[roleOfTheMember];
+  memberRole.innerHTML = roleOfTheMember;
   cardText.appendChild(memberRole);
 
 }
