@@ -10,32 +10,32 @@ const ourTeam = [
   {
     name: "Michael Scott",
     role: "Direttore Regionale",
-    //photo: insertPhoto() 
+    photo: "img/michael-scott.jpg" 
   },
   {
     name: "Dwight Schrute",
     role: "Assistente del direttore regionale ",
-    //photo: insertPhoto() 
+    photo: "img/dwight.jpg"
   },
   {
     name: "Jim Halpert",
     role: "Addetto alle vendite",
-    //photo: insertPhoto() 
+    photo: "img/jim.jpg"
   },
   {
     name: "Pam Beesly",
     role: "Segretaria",
-    //photo: insertPhoto() 
+    photo: "img/pam.jpg"
   },
   {
     name: "Ryan Howard",
     role: "Stagista",
-    //photo: insertPhoto() 
+    photo: "img/ryan.jpg"
   },
   {
     name: "Kevin Malone",
     role: "Contabile",
-    //photo: insertPhoto() 
+    photo: "img/kevin.jpg" 
   },
 
 
@@ -44,10 +44,21 @@ const ourTeam = [
 
 
 let cardMember;
-const imageLink = "img/wayne-barnett-founder-ceo.jpg";
-createEmptyCard();
-createImage(imageLink);
-memberInfo(0,0)
+const imageLink = "img/michael-scott.jpg";
+
+
+
+
+for (let i=0; i < ourTeam.length; i++){
+
+  createEmptyCard();
+  let photoOfTheMember = ourTeam[i].photo;
+  createImage(photoOfTheMember);
+  let infoNameOfTheMember = ourTeam[i].name;
+  let infoRoleOfTheMember = ourTeam[i].role;
+  memberInfo(infoNameOfTheMember,infoRoleOfTheMember);
+}
+
 
 //funzione per creare la card
 function createEmptyCard() {
@@ -79,10 +90,10 @@ function memberInfo(nameOfTheMember, roleOfTheMember){
   cardText.setAttribute('class', 'card-text');
   cardMember.appendChild(cardText);
   let memberName = document.createElement('h3');
-  memberName.innerHTML = ourTeam[nameOfTheMember].name;
+  memberName.innerHTML = ourTeam[nameOfTheMember];
   cardText.appendChild(memberName);
   let memberRole = document.createElement('p');
-  memberRole.innerHTML = ourTeam[roleOfTheMember].role;
+  memberRole.innerHTML = ourTeam[roleOfTheMember];
   cardText.appendChild(memberRole);
 
 }
